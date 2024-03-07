@@ -35,8 +35,8 @@ try {
             try {
                 const page = await axios.get(`https://api.vistarooms.com/api/v2/property-list?page=${i}`, {
                     headers: {
-                        'apiKey': '217B8-8E4F7',
-                        'secretKey': '5ddce5954fdbd9cd40a54babbf93a3624b784bce'
+                        'apiKey': process.env.apiKey,
+                'secretKey': process.env.secretKey
                     }
                 });
                 const pageData = page.data
